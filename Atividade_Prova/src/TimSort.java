@@ -102,6 +102,7 @@ public class TimSort {
     }
 
     public int getMovementCount() {
+
         return movementCount;
     }
 }

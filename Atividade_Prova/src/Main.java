@@ -8,16 +8,16 @@ public class Main {
     public static void main(String[] args) {
 
         /*
-        Radix Sort LSD MSD;
+        Radix Sort MSD;
         Bucket Sort;
         Tim Sort;
         Heap Sort;
         */
 
-        RadixSort radixSort = new RadixSort(); // A fazer
+        RadixSort radixSort = new RadixSort();
         BucketSort bucketSort = new BucketSort();
         TimSort timSort = new TimSort();
-        HeapSort heapSort = new HeapSort(); // A fazer
+        HeapSort heapSort = new HeapSort();
 
         LerArquivo lerArquivo = new LerArquivo();
         String nomeArquivo= "dados500_mil.txt";
@@ -29,14 +29,14 @@ public class Main {
         int opcao;
         try {
             opcao = Integer.parseInt(JOptionPane.showInputDialog(null,
-                    "**** Escolha o Algoritmo De Ordenação ****\n\n1 - Radix Sort LSD MSD\n2 - Bucket Sort\n3 - Tim Sort\n4 - Heap Sort\n5 - Sair"));
+                    "**** Escolha o Algoritmo De Ordenação ****\n\n1 - Radix Sort  MSD\n2 - Bucket Sort\n3 - Tim Sort\n4 - Heap Sort\n5 - Sair"));
         } catch (NumberFormatException e) {
             JOptionPane.showMessageDialog(null, "Entrada inválida. Por favor,selecione uma opção.", "Erro", JOptionPane.ERROR_MESSAGE);
             return;
         }
         switch (opcao) {
             case 1:
-                radixSort.sort(arrayNumeros); // A fazer
+                radixSort.sort(arrayNumeros);
                 JOptionPane.showMessageDialog(null, "**** Radix Sort ****\n\nTempo de execução: " + RadixSort.formatDuration(RadixSort.duration) +
                         "\nComparações: " + radixSort.getComparisonCount() + "\nQuantidade de trocas: " + radixSort.getMovementCount(), "Radix Sort", JOptionPane.INFORMATION_MESSAGE);
                 break;
@@ -51,7 +51,7 @@ public class Main {
                         "\nComparações: " + timSort.getComparisonCount() + "\nQuantidade de trocas: " + timSort.getMovementCount(), "Tim Sort", JOptionPane.INFORMATION_MESSAGE);
                 break;
             case 4:
-                heapSort.sort(arrayNumeros); // A fazer
+                heapSort.sort(arrayNumeros);
                 JOptionPane.showMessageDialog(null, "**** Heap Sort ****\n\nTempo de execução: " + HeapSort.formatDuration(HeapSort.duration) +
                         "\nComparações: " + heapSort.getComparisonCount() + "\nQuantidade de trocas: " + heapSort.getMovementCount(), "Heap Sort", JOptionPane.INFORMATION_MESSAGE);
                 break;

@@ -2,8 +2,8 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 public class BucketSort {
-    private int comparisonCount;
-    private int movementCount;
+    private long comparisonCount;
+    private long movementCount;
     public static long duration;
 
     public void sort(int[] array) {
@@ -63,11 +63,11 @@ public class BucketSort {
 
 
 
-    public int getComparisonCount() {
+    public long getComparisonCount() {
         return comparisonCount;
     }
 
-    public int getMovementCount() {
+    public long getMovementCount() {
         return movementCount;
     }
 
